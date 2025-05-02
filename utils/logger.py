@@ -1,6 +1,17 @@
+import os
 import pandas as pd
+from datetime import datetime
 
-def log_entry(path, timestamp, vehicle_type, plate_text):
-    df = pd.DataFrame([[timestamp.strftime("%Y-%m-%d %H:%M:%S"), vehicle_type, plate_text]],
-                      columns=["timestamp", "vehicle_type", "plate_text"])
-    df.to_csv(path, mode='a', header=not pd.io.common.file_exists(path), index=False)
+def init_log(log_dir="logs"):
+    os.makedirs(log_dir, exist_ok=True)
+    log_path = os.path.join(log_dir, "logs.csv")
+    if not os.path.isfile(log_path):
+        df_log = pd.DataFrame(columns=["timestamp", "vehicle_type", "plate_text"])
+        df_log.to_csv(log_path, index=False)
+    return log_path
+
+def append_log(log_path, vehicle_type, plate_text):
+    timestamp = datetime.now().strftime("%Y-%m-%d %H:%M:%S")
+    df_log = pd.DataFrame([[timestamp, vehicle_type, plate_text]],
+                          columns=["timestamp", "vehicle_type", "plate_text"])
+    df_log.to_csv(log_path, mode='a', header=False, index=False)
