@@ -1,7 +1,7 @@
 ultralytics==8.1.26
 opencv-python
 pillow
-gradio
+gradio==3.50.0
 paddleocr
 paddlepaddle==2.5.0  # Must be CPU-compatible for Hugging Face
 torch
