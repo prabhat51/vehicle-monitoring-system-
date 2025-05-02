@@ -4,3 +4,6 @@ pillow
 gradio
 paddleocr
 paddlepaddle==2.5.0  # Must be CPU-compatible for Hugging Face
+torch
+numpy
+pandas
