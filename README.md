@@ -16,4 +16,4 @@ This project detects vehicles in video, classifies type, detects license plates,
 git clone https://github.com/prabhat51/vehicle-monitoring-system.git
 cd vehicle-monitoring-system
 pip install -r requirements.txt
-python main.py
+python app.py
