@@ -3,6 +3,8 @@ import os
 from datetime import datetime
 from ultralytics import YOLO
 from paddleocr import PaddleOCR
+import sys
+sys.path.append(os.path.dirname(os.path.abspath(__file__)))
 from utils.ocr_utils import clean_plate_text
 from utils.logger import init_log, append_log
 
@@ -45,7 +47,7 @@ class VehiclePipeline:
 
                 now = datetime.now()
                 if plate_text in recent_logs and (now - recent_logs[plate_text]).total_seconds() < 60:
-                    continue  # Skip recent duplicates
+                    continue  
 
                 recent_logs[plate_text] = now
                 append_log(self.log_path, vehicle_type, plate_text)
