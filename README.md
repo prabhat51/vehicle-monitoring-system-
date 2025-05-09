@@ -1,6 +1,6 @@
 # Vehicle Monitoring System
 
-This project detects vehicles in video, classifies type, detects license plates, and recognizes the number using PaddleOCR.
+This project detects vehicles in video, classifies type, detects license plates using YOLOv8, and recognizes the number using PaddleOCR.
 
 ## Features
 
