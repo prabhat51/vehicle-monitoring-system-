@@ -17,3 +17,6 @@ git clone https://github.com/prabhat51/vehicle-monitoring-system.git
 cd vehicle-monitoring-system
 pip install -r requirements.txt
 python app.py
+
+## Finetuned Model download
+https://huggingface.co/Prabhat51/number-plate-models
