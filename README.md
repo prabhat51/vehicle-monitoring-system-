@@ -10,6 +10,9 @@ This project detects vehicles in video, classifies type, detects license plates,
 - OCR + cleaning for valid Indian plate formats
 - CSV logging
 
+# Download Models
+https://huggingface.co/Prabhat51/number-plate-models
+
 ## Run Locally
 
 ```bash
@@ -18,5 +21,4 @@ cd vehicle-monitoring-system
 pip install -r requirements.txt
 python app.py
 
-## Finetuned Model download
-https://huggingface.co/Prabhat51/number-plate-models
+
